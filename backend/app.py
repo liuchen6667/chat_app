@@ -8,7 +8,7 @@ app = Flask(__name__)
 CORS(app)  # 允许跨域请求
 
 # API配置
-API_SECRET_KEY = "sk-zk229ba1908ca11ee556a14585c11b1725466cda8a4362dd"  # 请替换为你的实际API密钥
+API_SECRET_KEY = ""  # 请替换为你的实际API密钥
 BASE_URL = "https://api.zhizengzeng.com/v1/"
 API_ENDPOINT = f"{BASE_URL}chat/completions"
 
