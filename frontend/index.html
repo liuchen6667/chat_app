@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能导购助手</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 引入marked.js用于Markdown解析 -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- 引入DOMPurify用于防止XSS攻击 -->
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@2.4.0/dist/purify.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🤖 智能导购助手</h1>
+            <div class="header-actions">
+                <span id="conversation-count" class="conversation-count">对话轮数: 0</span>
+                <button id="clear-history" class="clear-btn">🗑️ 清除历史</button>
+                <button id="test-count" class="test-btn">🧪 测试轮数</button>
+            </div>
+        </div>
+        
+        <div class="chat-container">
+            <div id="chat-messages" class="chat-messages">
+                <div class="message system">
+                    <div class="message-content">你好！我是AI助手，有什么可以帮助你的吗？</div>
+                </div>
+            </div>
+            
+            <div class="input-container">
+                <textarea 
+                    id="message-input" 
+                    placeholder="输入你的消息... (支持Markdown格式)" 
+                    rows="3"
+                ></textarea>
+                <button id="send-button">发送</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
